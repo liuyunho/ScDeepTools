@@ -6,8 +6,14 @@ $ Pseudo_Inference --data ~/data.csv  --num_epochs 50 --save --save_path ~/outpu
 ```
 
 ```
+$ ******Start data import and gene screening******  
+$ ******The gene screening result is as follows:******  
 $ Cell number: 13710  
 $ Screened gene number: 2441  
-$ 100%|████████████████████████████████████████████████████████████████| 50/50 [04:00<00:00,  4.81s/it, epoch_loss=6.41e+04]  
-$ The optimized parameters and the inferred pseudocells are saved to: ~/output
+$ ******Start pseudocell inference model optimization******  
+$ 100%|██████████████████████████████████████████████████████████████████| 50/50 [00:10<00:00,  5.20s/it, epoch_loss=8.28e+04]  
+$ ******Model optimization complete!******  
+$ ******Start pseudocell probability inference******  
+$ ******Inference complete!******  
+$ The optimized parameters and the inferred pseudocells are saved to: /home/liuyunhe/test_part  
 ```
