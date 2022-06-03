@@ -15,5 +15,5 @@ $ 100%|████████████████████████�
 $ ******Model optimization complete!******  
 $ ******Start pseudocell probability inference******  
 $ ******Inference complete!******  
-$ The optimized parameters and the inferred pseudocells are saved to: /home/liuyunhe/test_part  
+$ The optimized parameters and the inferred pseudocells are saved to: ~/output  
 ```
