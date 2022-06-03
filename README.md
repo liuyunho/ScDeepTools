@@ -46,3 +46,20 @@ $ ******Start ImpurityCell probability inference******
 $ ******Inference complete!******  
 $ The optimized parameters and the inferred ImpurityCell are saved to: ~/output  
 ```
+
+```
+$ Deep_LDA Inference --data ~/data.csv --num_epochs 50 --save --save_path ~/output
+```
+
+```
+$ ******Start data import and gene screening******
+$ ******The gene screening result is as follows:******
+$ Cell number: 13710
+$ Screened gene number: 2441
+$ ******Start Deep-LDA model optimization******
+$ 100%|████████████████████████████████████████████████████████████████| 50/50 [01:17<00:00,  1.54s/it, epoch_loss=7.29e+04]
+$ ******Model optimization complete!******
+$ ******Start Deep-LDA inference******
+$ ******Inference complete!******
+$ The optimized parameters and the inferred results are saved to: ~/output
+```
