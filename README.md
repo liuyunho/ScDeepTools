@@ -63,3 +63,17 @@ $ ******Start Deep-LDA inference******
 $ ******Inference complete!******
 $ The optimized parameters and the inferred results are saved to: ~/output
 ```
+
+```
+Deep_LDA Transfer_learning --data ~/data.csv --beta ~/gene_frequency.csv --num_epochs 50 --save --save_path ~/output
+```
+
+```
+******Start data import and intersect genes******
+******Start Deep-LDA classifier optimization******
+100%|████████████████████████████████████████████████████████████████| 50/50 [01:06<00:00,  1.33s/it, epoch_loss=8.04e+04]
+******Model optimization complete!******
+******Start class inference******
+******Inference complete!******
+The optimized parameters and the inferred results are saved to: ~/output
+```
