@@ -2,13 +2,14 @@
 The software includes three deep generative models, a pseudo-cell inference model, a noisy cell inference model, and an LDA-based inference model for cell classification and class-specific genes analysis. Moreover, the software includes an interactive single-cell sequencing cell distribution mapping tool for manipulation of cell deletion and export.
 
 ## Installation
-This library can be downloaded and then installed locally (Part of the code within files has not been uploaded yet. Currently, it mainly shows the software running process, and a more detailed tutorial site is being prepared to go online).
+This library can be downloaded and then installed locally (Part of the code within files has not been uploaded yet, but the library architecture is complete. Currently, it mainly shows the software running process, and a more detailed tutorial site is being prepared to go online).
 ```
 unzip ScDeepTools-main.zip
 cd ScDeepTools-main
 pip install .
 ```
 
+## Pseudo cell inference generative model
 ```
 $ Pseudo_Inference --data ~/data.csv  --num_epochs 50 --save --save_path ~/output
 ```
@@ -26,6 +27,7 @@ $ ******Inference complete!******
 $ The optimized parameters and the inferred pseudocells are saved to: ~/output  
 ```
 
+## Impurity cell inference generative model
 ```
 $ Impurity_Inference --data ~/data.csv --tags ~/tags.csv --num_epochs 50 --save --save_path ~/output
 ```
@@ -55,6 +57,7 @@ $ ******Inference complete!******
 $ The optimized parameters and the inferred ImpurityCell are saved to: ~/output  
 ```
 
+## Deep-LDA Model inference
 ```
 $ Deep_LDA Inference --data ~/data.csv --num_epochs 50 --save --save_path ~/output
 ```
