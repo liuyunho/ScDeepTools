@@ -9,11 +9,15 @@ cd ScDeepTools-main
 pip install .
 ```
 
-## Pseudo cell inference generative model
+## Usage
+After the software installed, three functions can be run, Pseudo_Inference for pseudo cell inference, Impurity_Inference for impurity cell inference, and Deep-LDA for cell classification and class-specific gene inference.
+
+### Pseudo cell inference generative model
+Pseudo_Inference can be run from the command line. For more parameter description, you can use -h to query.
 ```
 $ Pseudo_Inference --data ~/data.csv  --num_epochs 50 --save --save_path ~/output
 ```
-
+Screen output during running
 ```
 $ ******Start data import and gene screening******  
 $ ******The gene screening result is as follows:******  
@@ -26,12 +30,16 @@ $ ******Start pseudocell probability inference******
 $ ******Inference complete!******  
 $ The optimized parameters and the inferred pseudocells are saved to: ~/output  
 ```
+The output files include:  
+- Optimized pyro parameters and neural network parameters: Em_YYYY_WW_MM .save1 and Em_YYYY_WW_MM .save2
+- Inferred pseudo cell probability: Pseudo_Probability.csv
 
-## Impurity cell inference generative model
+### Impurity cell inference generative model
+Impurity_Inference can be run from the command line. For more parameter description, you can use -h to query.
 ```
 $ Impurity_Inference --data ~/data.csv --tags ~/tags.csv --num_epochs 50 --save --save_path ~/output
 ```
-
+Screen output during running
 ```
 $ ******Start data import and gene screening******  
 $ ******The gene screening result is as follows:******  
@@ -56,12 +64,16 @@ $ ******Start ImpurityCell probability inference******
 $ ******Inference complete!******  
 $ The optimized parameters and the inferred ImpurityCell are saved to: ~/output  
 ```
+The output files include:  
+- Optimized pyro parameters and neural network parameters: Im_YYYY_WW_MM .save1 and Im_YYYY_WW_MM .save2
+- Inferred pseudo cell probability: Impurity_Probability.csv
 
-## Deep-LDA Model inference
+### Deep-LDA Model inference
+The Inference module of Deep-LDA can be run from the command line. For more parameter description, you can use -h to query.
 ```
 $ Deep_LDA Inference --data ~/data.csv --num_epochs 50 --save --save_path ~/output
 ```
-
+Screen output during running
 ```
 $ ******Start data import and gene screening******
 $ ******The gene screening result is as follows:******
@@ -74,11 +86,19 @@ $ ******Start Deep-LDA inference******
 $ ******Inference complete!******
 $ The optimized parameters and the inferred results are saved to: ~/output
 ```
+The output files include:  
+- Optimized pyro parameters and neural network parameters: LDA_YYYY_WW_MM .save1 and LDA_YYYY_WW_MM .save2
+- Inferred cell initial class and merged class: Cell_Classification.csv
+- Class-specific genes: Class_Specific_Gene.csv
+- Class-specific genes intersection: Class_Gene_Intersection.csv
+- Trained class-gene frequency: Trained_Gene_Frequency.csv
 
+### Deep-LDA Model Transfer learning
+The Transfer_learning module of Deep-LDA can be run from the command line. For more parameter description, you can use -h to query.
 ```
 Deep_LDA Transfer_learning --data ~/data.csv --beta ~/gene_frequency.csv --num_epochs 50 --save --save_path ~/output
 ```
-
+Screen output during running
 ```
 ******Start data import and intersect genes******
 ******Start Deep-LDA classifier optimization******
@@ -88,3 +108,6 @@ Deep_LDA Transfer_learning --data ~/data.csv --beta ~/gene_frequency.csv --num_e
 ******Inference complete!******
 The optimized parameters and the inferred results are saved to: ~/output
 ```
+The output files include:  
+- Optimized pyro parameters and neural network parameters: TransferLDA_YYYY_WW_MM .save1 and TransferLDA_YYYY_WW_MM .save2
+- Inferred cell annotation: Cell_Transferred_Classification.csv
