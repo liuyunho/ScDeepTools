@@ -2,7 +2,7 @@
 The software includes three deep generative models, a pseudo-cell inference model, a noisy cell inference model, and an LDA-based inference model for cell classification and class-specific genes analysis. Moreover, the software includes an interactive single-cell sequencing cell distribution mapping tool for manipulation of cell deletion and export.
 
 ## Installation
-This library can be downloaded and then installed locally (Part of the code within files has not been uploaded yet).
+This library can be downloaded and then installed locally (Part of the code within files has not been uploaded yet. Currently, it mainly shows the software running process, and a more detailed tutorial site is being prepared to go online).
 ```
 unzip ScDeepTools-main.zip
 cd ScDeepTools-main
